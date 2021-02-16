@@ -58,7 +58,6 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  background: var(--background-image) center center;
   background-size: cover !important;
   background-repeat: no-repeat;
   position: fixed;
@@ -569,18 +568,6 @@ body {
   --bg-color: rgb(10, 10, 10);
   --text-color: #fff;
   --blog-gray-color: rgb(180, 180, 180);
-  --background-image: linear-gradient(
-      45deg,
-      rgba(10, 10, 10, 0.3),
-      rgb(10, 10, 10, 1)
-    ),
-    url("./../assets/eth.gif");
-  --background-background: linear-gradient(
-      45deg,
-      rgba(10, 10, 10, 1),
-      rgba(10, 10, 10, 0.6)
-    ),
-    url("./../assets/eth.gif") center center fixed;
   --height: 50vh;
 }
 
@@ -606,12 +593,6 @@ body {
 
 @media (max-width: 800px) {
   :root {
-    --background-image: linear-gradient(
-        45deg,
-        rgba(10, 10, 10, 1),
-        rgba(10, 10, 10, 0)
-      ),
-      url("./../assets/eth.gif") !important;
   }
 }
 
@@ -1045,4 +1026,24 @@ body {
 .fa-google {
   background: #dd4b39;
   color: white;
+}
+
+/* ---- reset ---- */
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
